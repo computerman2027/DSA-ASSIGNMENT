@@ -59,13 +59,13 @@ void bubblesort(int *arr, int n)
             return;
     }
 }
-void display(int *arr, int n,int type)
+void display(int *arr, int n, int type)
 {
     int i;
-    if(type==0)
-    printf("ARRAY AFTER SORTING = ");
-     else
-     printf("ARRAY BEFORE SORTING = ");
+    if (type == 0)
+        printf("ARRAY AFTER SORTING = ");
+    else
+        printf("ARRAY BEFORE SORTING = ");
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
@@ -119,30 +119,30 @@ int main()
             if (c != 0)
             {
                 n = insertItem(arr, n);
-                display(arr,n,1);
-            }    
+                display(arr, n, 1);
+            }
             bubblesort(arr, n);
-            display(arr, n,0);
+            display(arr, n, 0);
             c++;
             break;
         case 2:
             if (c != 0)
             {
                 n = insertItem(arr, n);
-                display(arr,n,1);
+                display(arr, n, 1);
             }
             selectionsort(arr, n);
-            display(arr, n,0);
+            display(arr, n, 0);
             c++;
             break;
         case 3:
             if (c != 0)
             {
                 n = insertItem(arr, n);
-                display(arr,n,1);
+                display(arr, n, 1);
             }
             insertionsort(arr, n);
-            display(arr, n,0);
+            display(arr, n, 0);
             c++;
             break;
         case 4:
