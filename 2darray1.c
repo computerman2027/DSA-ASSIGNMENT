@@ -28,6 +28,7 @@ int main()
     if (!(r1 == r2 && c1 == c2))
     {
         printf("INVALID AARRAY SIZE\n");
+        return 0;
     }
     printf("Enter elements for 1st matrix\n");
     for (i = 0; i < r1; i++)
