@@ -21,13 +21,13 @@ int main()
 {
     int arr1[MAXSIZE][MAXSIZE], arr2[MAXSIZE][MAXSIZE];
     int r1, r2, c1, c2, i, j;
-    printf("Enter row of 1st matrix : ");
+    printf("Enter no of row of 1st matrix : ");
     scanf("%d", &r1);
-    printf("Enter column of 1st matrix : ");
+    printf("Enter no of column of 1st matrix : ");
     scanf("%d", &c1);
-    printf("Enter row of 2nd matrix : ");
+    printf("Enter no of row of 2nd matrix : ");
     scanf("%d", &r2);
-    printf("Enter column of 2nd matrix : ");
+    printf("Enter no of column of 2nd matrix : ");
     scanf("%d", &c2);
     printf("Enter elements for 1st matrix\n");
     for (i = 0; i < r1; i++)
@@ -63,6 +63,6 @@ int main()
         }
         printf("\n");
     }
-    printf("The arrays are %s\n", isSame(arr1, r1, c1, arr2, r2, c2) == 1 ? "Identical" : "Non Identical");
+    printf("The matrices are %s\n", isSame(arr1, r1, c1, arr2, r2, c2) == 1 ? "Identical" : "Non Identical");
     return 0;
 }

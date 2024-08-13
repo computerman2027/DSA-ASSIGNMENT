@@ -19,9 +19,9 @@ int main()
 {
     int arr1[MAXSIZE][MAXSIZE];
     int r1, c1, i, j;
-    printf("Enter row of matrix : ");
+    printf("Enter no of row of matrix : ");
     scanf("%d", &r1);
-    printf("Enter column of matrix : ");
+    printf("Enter no of column of matrix : ");
     scanf("%d", &c1);
     printf("Enter elements for matrix\n");
     for (i = 0; i < r1; i++)

@@ -17,13 +17,13 @@ int main()
 {
     int arr1[MAXSIZE][MAXSIZE], arr2[MAXSIZE][MAXSIZE], arr3[MAXSIZE][MAXSIZE];
     int r1, r2, c1, c2, i, j;
-    printf("Enter row of 1st matrix : ");
+    printf("Enter no of row of 1st matrix : ");
     scanf("%d", &r1);
-    printf("Enter column of 1st matrix : ");
+    printf("Enter no of column of 1st matrix : ");
     scanf("%d", &c1);
-    printf("Enter row of 2nd matrix : ");
+    printf("Enter no of row of 2nd matrix : ");
     scanf("%d", &r2);
-    printf("Enter column of 2nd matrix : ");
+    printf("Enter no of column of 2nd matrix : ");
     scanf("%d", &c2);
     if (!(r1 == r2 && c1 == c2))
     {

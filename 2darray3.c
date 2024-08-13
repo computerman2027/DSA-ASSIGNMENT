@@ -21,17 +21,18 @@ int main()
 {
 	int arr1[MAXSIZE][MAXSIZE], arr2[MAXSIZE][MAXSIZE], arr3[MAXSIZE][MAXSIZE];
 	int r1, r2, c1, c2, r3, c3, i, j, k;
-	printf("Enter row of 1st matrix : ");
+	printf("Enter no of row of 1st matrix : ");
 	scanf("%d", &r1);
-	printf("Enter column of 1st matrix : ");
+	printf("Enter no of column of 1st matrix : ");
 	scanf("%d", &c1);
-	printf("Enter row of 2nd matrix : ");
+	printf("Enter no of row of 2nd matrix : ");
 	scanf("%d", &r2);
-	printf("Enter column of 2nd matrix : ");
+	printf("Enter no of column of 2nd matrix : ");
 	scanf("%d", &c2);
 	if (!(c1 == r2))
 	{
-		printf("INVALID MATRIX SIZE\n");
+		printf("INVALID MATRIX SIZE. MULTIPLICATION NOT POSSIBLE\n");
+		return 0;
 	}
 	printf("Enter elements for 1st matrix\n");
 	for (i = 0; i < r1; i++)
