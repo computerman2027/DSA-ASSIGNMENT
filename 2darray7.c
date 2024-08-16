@@ -15,41 +15,46 @@ void insertionsort(int *arr, int n)
         arr[j + 1] = temp;
     }
 }
+void sortRow(int arr[][MAXSIZE],int r,int c)
+{
+    int i;
+    for (i = 0; i < r; i++)
+    {
+        insertionsort(arr[i], c);
+    }
+}
 int main()
 {
-    int arr1[MAXSIZE][MAXSIZE];
-    int r1, c1, i, j;
+    int arr[MAXSIZE][MAXSIZE];
+    int r, c, i, j;
     printf("Enter no of row of matrix : ");
-    scanf("%d", &r1);
+    scanf("%d", &r);
     printf("Enter no of column of matrix : ");
-    scanf("%d", &c1);
+    scanf("%d", &c);
     printf("Enter elements for matrix\n");
-    for (i = 0; i < r1; i++)
+    for (i = 0; i < r; i++)
     {
-        for (j = 0; j < c1; j++)
+        for (j = 0; j < c; j++)
         {
-            scanf("%d", &arr1[i][j]);
+            scanf("%d", &arr[i][j]);
         }
     }
     printf("Matrix before sorting : \n");
-    for (i = 0; i < r1; i++)
+    for (i = 0; i < r; i++)
     {
-        for (j = 0; j < c1; j++)
+        for (j = 0; j < c; j++)
         {
-            printf("%d\t", arr1[i][j]);
+            printf("%d\t", arr[i][j]);
         }
         printf("\n");
     }
-    for (i = 0; i < r1; i++)
-    {
-        insertionsort(arr1[i], c1);
-    }
+    sortRow(arr,r,c);
     printf("Matrix after sorting : \n");
-    for (i = 0; i < r1; i++)
+    for (i = 0; i < r; i++)
     {
-        for (j = 0; j < c1; j++)
+        for (j = 0; j < c; j++)
         {
-            printf("%d\t", arr1[i][j]);
+            printf("%d\t", arr[i][j]);
         }
         printf("\n");
     }

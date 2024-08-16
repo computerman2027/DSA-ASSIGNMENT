@@ -44,6 +44,6 @@ int main()
         }
         printf("\n");
     }
-    printf("The matrix is %s\n", isSparse(arr1, r1, c1) == 1 ? "Sparse " : "Non Sparse");
+    printf("The matrix is %s\n", isSparse(arr1, r1, c1) == 1 ? "Sparse" : "Non Sparse");
     return 0;
 }

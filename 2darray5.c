@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define MAXSIZE 20
 
-int isSame(int arr[][MAXSIZE], int r1, int c1, int arr2[][MAXSIZE], int r2, int c2)
+int isIdentical(int arr1[][MAXSIZE], int r1, int c1, int arr2[][MAXSIZE], int r2, int c2)
 {
     int i, j;
     if (!(r1 == r2 && c1 == c2))
@@ -11,7 +11,7 @@ int isSame(int arr[][MAXSIZE], int r1, int c1, int arr2[][MAXSIZE], int r2, int 
     {
         for (j = 0; j < c1; j++)
         {
-            if (arr[i][j] != arr2[i][j])
+            if (arr1[i][j] != arr2[i][j])
                 return 0;
         }
     }
@@ -63,6 +63,6 @@ int main()
         }
         printf("\n");
     }
-    printf("The matrices are %s\n", isSame(arr1, r1, c1, arr2, r2, c2) == 1 ? "Identical" : "Non Identical");
+    printf("The matrices are %s\n", isIdentical(arr1, r1, c1, arr2, r2, c2) == 1 ? "Identical" : "Non Identical");
     return 0;
 }

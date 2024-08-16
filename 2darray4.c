@@ -19,6 +19,11 @@ int main()
     scanf("%d", &r);
     printf("Enter no of column of matrix : ");
     scanf("%d", &c);
+    if (r != c)
+    {
+        printf("Trace of a matrix is applicable only for square matrix");
+        return 0;
+    }
     printf("Enter elements for matrix\n");
     for (i = 0; i < r; i++)
     {
@@ -35,11 +40,6 @@ int main()
             printf("%d\t", arr1[i][j]);
         }
         printf("\n");
-    }
-    if (r != c)
-    {
-        printf("Trace of a matrix is applicable only for square matrix");
-        return 0;
     }
     printf("trace = %d\n", trace(arr1, r));
     return 0;
