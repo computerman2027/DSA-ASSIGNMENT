@@ -73,8 +73,11 @@ void intopost(char *str, char *ans2)
         else if (str[i] == ')')
         {
             d = pop();
-            ans[k] = ',';
-            k++;
+            if (k > 0 && ans[k - 1] != ',')
+            {
+                ans[k] = ',';
+                k++;
+            }
             while (d != '(')
             {
                 ans[k] = d;
@@ -85,8 +88,11 @@ void intopost(char *str, char *ans2)
         }
         else
         {
-            ans[k] = ',';
-            k++;
+            if (k > 0 && ans[k - 1] != ',')
+            {
+                ans[k] = ',';
+                k++;
+            }
             while (presedence(peep()) >= presedence(str[i]))
             {
                 d = pop();
