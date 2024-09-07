@@ -63,7 +63,7 @@ void intopost(char *str, char *ans2)
     {
         if (isdigit(str[i]) || isalpha(str[i]))
         {
-            ans[k] = str[i];
+            ans2[k] = str[i];
             k++;
         }
         else if (str[i] == '(')
@@ -73,38 +73,38 @@ void intopost(char *str, char *ans2)
         else if (str[i] == ')')
         {
             d = pop();
-            if (k > 0 && ans[k - 1] != ',')
+            if (k > 0 && ans2[k - 1] != ',')
             {
-                ans[k] = ',';
+                ans2[k] = ',';
                 k++;
             }
             while (d != '(')
             {
-                ans[k] = d;
-                ans[k + 1] = ',';
+                ans2[k] = d;
+                ans2[k + 1] = ',';
                 k += 2;
                 d = pop();
             }
         }
         else
         {
-            if (k > 0 && ans[k - 1] != ',')
+            if (k > 0 && ans2[k - 1] != ',')
             {
-                ans[k] = ',';
+                ans2[k] = ',';
                 k++;
             }
             while (presedence(peep()) >= presedence(str[i]))
             {
                 d = pop();
-                ans[k] = d;
-                ans[k + 1] = ',';
+                ans2[k] = d;
+                ans2[k + 1] = ',';
                 k += 2;
             }
             push(str[i]);
         }
     }
-    ans[k - 1] = ' ';
-    ans[k] = '\0';
+    ans2[k - 1] = ' ';
+    ans2[k] = '\0';
 }
 
 int main()

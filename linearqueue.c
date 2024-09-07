@@ -60,7 +60,7 @@ int isEmpty(){
 	return 0;
 }
 int isFull(){
-	if(f==0 && r==MAXSIZE-1)
+	if(r==MAXSIZE-1)
 	return 1;
 	return 0;
 }
