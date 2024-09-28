@@ -6,7 +6,7 @@
 void merge(int *arr, int lb, int mid, int ub)
 {
     int s = ub - lb + 1;
-    int b[s];
+    int b[MAXITEM];
     int i, j, k = 0;
     for (i = lb, j = mid + 1; i <= mid && j <= ub;)
     {
@@ -75,14 +75,14 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    printf("ARRAY before sorting= ");
+    printf("ARRAY before sorting = ");
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
     mergesort(arr, 0, n - 1);
-    printf("ARRAY after sorting= ");
+    printf("ARRAY after sorting = ");
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
