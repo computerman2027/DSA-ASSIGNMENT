@@ -47,6 +47,7 @@ void insertafter(int item, int after)
     if (head == NULL)
     {
         printf("LinkedList is empty\n");
+        return;
     }
     Node *temp = head;
     while (temp != NULL)
@@ -68,6 +69,7 @@ void insertbefore(int item, int before)
     if (head == NULL)
     {
         printf("LinkedList is empty\n");
+        return;
     }
 
     if (head->data == before)
