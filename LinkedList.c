@@ -170,7 +170,9 @@ void deleteBefore(int before)
     }
     else if (head->next != NULL && head->next->data == before)
     {
+        Node* del=head;
         head = head->next;
+        free(del);
     }
     else
     {
@@ -179,7 +181,7 @@ void deleteBefore(int before)
         {
             return;
         }
-        while (temp->next->next != NULL)
+        while (temp->next!=NULL && temp->next->next != NULL)
         {
             if (temp->next->next->data == before)
             {
