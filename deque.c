@@ -87,22 +87,22 @@ void display()
         printf("Queue is empty\n");
         return;
     }
-    if(rear<front)
+    if (rear < front)
     {
-        for(i=front;i<MAXSIZE;i++)
+        for (i = front; i < MAXSIZE; i++)
         {
-            printf("%d ",queue[i]);
+            printf("%d ", queue[i]);
         }
-        for(i=0;i<=rear;i++)
+        for (i = 0; i <= rear; i++)
         {
-            printf("%d ",queue[i]);
+            printf("%d ", queue[i]);
         }
     }
     else
     {
-        for(i=front;i<=rear;i++)
+        for (i = front; i <= rear; i++)
         {
-            printf("%d ",queue[i]);
+            printf("%d ", queue[i]);
         }
     }
     printf("\n");
@@ -124,7 +124,9 @@ int isEmpty()
 
 int main()
 {
-    int ch, num;
+    int ch, ch2, num;
+    printf("TYPES OF DEQUE\n1. Input restricted\n2. Output restricted\nEnter your choice : ");
+    scanf("%d", &ch2);
     while (1)
     {
         printf("MENU\n1. Enqueue at front\n2. Enqueue at end\n3. Dequeue at front\n4. Dequeue at end\n5. Display\n6. IsFull\n7. IsEmpty\n8. Exit\nEnter your choice : ");
@@ -132,6 +134,11 @@ int main()
         switch (ch)
         {
         case 1:
+            if (ch2 == 1)
+            {
+                printf("This function is not available for Input Restricted Deque\n");
+                break;
+            }
             printf("Enter number to be inserted : ");
             scanf("%d", &num);
             insertAtFront(num);
@@ -145,6 +152,11 @@ int main()
             deleteAtFront();
             break;
         case 4:
+            if (ch2 == 2)
+            {
+                printf("This function is not available for Output Restricted Deque\n");
+                break;
+            }
             deleteAtEnd();
             break;
         case 5:
