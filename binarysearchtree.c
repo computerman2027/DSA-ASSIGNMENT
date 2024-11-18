@@ -175,9 +175,10 @@ int search(Node *r, int data)
 int main()
 {
     int choice, val;
+    printf("Menu\n1. Insert\n2. Display Prefix\n3. Display Infix\n4. Display Postfix\n5. delete a node\n6. Search a node\n7. Exit\n");
     while (1)
     {
-        printf("Menu\n1. Insert\n2. Display Prefix\n3. Display Infix\n4. Display Postfix\n5. delete a node\n6. Search a node\n7. Exit\nEnter your choice : ");
+        printf("Enter your choice : ");
         scanf("%d", &choice);
         switch (choice)
         {
