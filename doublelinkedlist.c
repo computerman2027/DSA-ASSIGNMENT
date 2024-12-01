@@ -61,6 +61,7 @@ void insertAfter(int item, int after)
         {
             Node *newnode = createnode(item);
             newnode->next = temp->next;
+            if(temp->next!=NULL)
             temp->next->prev = newnode;
             temp->next = newnode;
             newnode->prev = temp;
