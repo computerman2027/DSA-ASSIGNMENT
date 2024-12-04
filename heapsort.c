@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include<stdlib.h>
-#define MAXSIZE 10
 
 void swap(int *a, int *b)
 {
@@ -63,7 +62,7 @@ int main()
     printf("ENTER NUMBER OF ELEMENTS\n");
     int n, i;
     scanf("%d", &n);
-    if (n < 1)
+    if (n < 1 )
     {
         printf("INVALID INPUT\n");
         return 0;
